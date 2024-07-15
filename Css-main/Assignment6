@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex Flexbox Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .item {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+      flex-basis: 200px;
+    }
+
+    .item2 {
+      order: 1;
+    }
+
+    .item3 {
+      align-self: flex-end;
+    }
+
+    .item4 {
+      align-self: center;
+    }
+
+    .item5 {
+      align-self: stretch;
+    }
+
+    .item6 {
+      align-self: baseline;
+    }
+
+    .item7 {
+      align-self: start;
+    }
+
+    .nested-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      background-color: #e0e0e0;
+    }
+
+    .nested-item {
+      background-color: #d0d0d0;
+      padding: 10px;
+      text-align: center;
+      flex-basis: 150px;
+    }
+
+    .nested-item1 {
+      order: 2;
+    }
+
+    .nested-item2 {
+      align-self: flex-end;
+    }
+
+    .nested-item3 {
+      align-self: center;
+    }
+
+    .nested-item4 {
+      align-self: stretch;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="item item1">Item 1</div>
+      <div class="item item2">Item 2</div>
+      <div class="item item3">Item 3</div>
+    </div>
+    <div class="row">
+      <div class="item item4">Item 4</div>
+      <div class="item item5">Item 5</div>
+      <div class="item item6">Item 6</div>
+      <div class="item item7">Item 7</div>
+    </div>
+    <div class="nested-container">
+      <div class="nested-item nested-item1">Nested Item 1</div>
+      <div class="nested-item nested-item2">Nested Item 2</div>
+      <div class="nested-item nested-item3">Nested Item 3</div>
+      <div class="nested-item nested-item4">Nested Item 4</div>
+    </div>
+  </div>
+</body>
+</html>

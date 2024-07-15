@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes and Pseudo-elements Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .box {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .box:hover {
+            background-color: #e0f7fa;
+        }
+        .box:active {
+            background-color: #b2ebf2;
+        }
+        .box input:focus {
+            border-color: #4CAF50;
+        }
+        .box ul li:nth-child(odd) {
+            background-color: #e0e0e0;
+        }
+        .box ul li:nth-child(even) {
+            background-color: #f0f0f0;
+        }
+        .box::before {
+            content: ">> ";
+            color: #4CAF50;
+        }
+        .box::after {
+            content: " <<";
+            color: #4CAF50;
+        }
+        .interactive {
+            display: block;
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Pseudo-classes and Pseudo-elements Demonstration</h1>
+</header>
+
+<div class="container">
+    <div class="box">
+        <h2>Hover and Active</h2>
+        <p>Hover over this box to see the background color change. Click and hold to see the active state.</p>
+    </div>
+    
+    <div class="box">
+        <h2>Focus</h2>
+        <input type="text" placeholder="Click to focus">
+    </div>
+    
+    <div class="box">
+        <h2>nth-child</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+    </div>
+    
+    <div class="box">
+        <h2>Before and After</h2>
+        <p>This text is wrapped with before and after pseudo-elements.</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .box {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            display: inline-block;
+            text-align: center;
+            transition: transform 0.5s;
+        }
+        .box:hover {
+            transform: scale(1.1);
+        }
+        .translate {
+            transform: translate(50px, 50px);
+        }
+        .rotate {
+            transform: rotate(45deg);
+        }
+        .scale {
+            transform: scale(1.5);
+        }
+        .skew {
+            transform: skew(20deg, 20deg);
+        }
+        .combined {
+            transform: translate(30px, 30px) rotate(30deg) scale(1.2) skew(10deg, 10deg);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CSS Transforms Demonstration</h1>
+</header>
+
+<div class="container">
+    <div class="box translate">
+        <h2>Translate</h2>
+        <p>This box is translated by 50px horizontally and vertically.</p>
+    </div>
+    
+    <div class="box rotate">
+        <h2>Rotate</h2>
+        <p>This box is rotated by 45 degrees.</p>
+    </div>
+    
+    <div class="box scale">
+        <h2>Scale</h2>
+        <p>This box is scaled by 1.5 times.</p>
+    </div>
+    
+    <div class="box skew">
+        <h2>Skew</h2>
+        <p>This box is skewed by 20 degrees horizontally and vertically.</p>
+    </div>
+    
+    <div class="box combined">
+        <h2>Combined Transform</h2>
+        <p>This box combines translate, rotate, scale, and skew transforms.</p>
+    </div>
+</div>
+
+</body>
+</html>

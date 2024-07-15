@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Typography Example</title>
+  <style>
+    /* Font Families */
+    .serif {
+      font-family: 'Times New Roman', serif;
+    }
+
+    .sans-serif {
+      font-family: Arial, sans-serif;
+    }
+
+    .monospace {
+      font-family: 'Courier New', monospace;
+    }
+
+    /* Font Sizes */
+    .small-text {
+      font-size: 14px;
+    }
+
+    .medium-text {
+      font-size: 18px;
+    }
+
+    .large-text {
+      font-size: 24px;
+    }
+
+    /* Font Styles */
+    .normal-style {
+      font-style: normal;
+    }
+
+    .italic-style {
+      font-style: italic;
+    }
+
+    .bold-style {
+      font-weight: bold;
+    }
+
+    /* Text Transformations */
+    .uppercase {
+      text-transform: uppercase;
+    }
+
+    .lowercase {
+      text-transform: lowercase;
+    }
+
+    .capitalize {
+      text-transform: capitalize;
+    }
+
+    /* Line Height */
+    .small-line-height {
+      line-height: 1.2;
+    }
+
+    .medium-line-height {
+      line-height: 1.5;
+    }
+
+    .large-line-height {
+      line-height: 2;
+    }
+
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2em;
+    }
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to my Website</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Font Families</h2>
+      <p class="serif">This text is in a serif font family.</p>
+      <p class="sans-serif">This text is in a sans-serif font family.</p>
+      <p class="monospace">This text is in a monospace font family.</p>
+    </section>
+
+    <section>
+      <h2>Font Sizes</h2>
+      <p class="small-text">This text is small.</p>
+      <p class="medium-text">This text is medium.</p>
+      <p class="large-text">This text is large.</p>
+    </section>
+
+    <section>
+      <h2>Font Styles</h2>
+      <p class="normal-style">This text has a normal font style.</p>
+      <p class="italic-style">This text has an italic font style.</p>
+      <p class="bold-style">This text has a bold font style.</p>
+    </section>
+
+    <section>
+      <h2>Text Transformations</h2>
+      <p class="uppercase">This text is in uppercase.</p>
+      <p class="lowercase">This text is in lowercase.</p>
+      <p class="capitalize">this text is capitalized.</p>
+    </section>
+
+    <section>
+      <h2>Line Height</h2>
+      <p class="small-line-height">This text has a small line height.</p>
+      <p class="medium-line-height">This text has a medium line height.</p>
+      <p class="large-line-height">This text has a large line height.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>

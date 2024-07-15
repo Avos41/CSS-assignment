@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .box {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            transition: all 0.5s ease;
+        }
+        .box:hover {
+            border-color: #4CAF50;
+        }
+        .color-transition {
+            color: #000;
+            transition: color 1s ease-in-out;
+        }
+        .color-transition:hover {
+            color: #4CAF50;
+        }
+        .bg-transition {
+            background-color: #fff;
+            transition: background-color 2s linear;
+        }
+        .bg-transition:hover {
+            background-color: #4CAF50;
+        }
+        .width-transition {
+            width: 100px;
+            transition: width 0.5s ease-in-out;
+        }
+        .width-transition:hover {
+            width: 200px;
+        }
+        .height-transition {
+            height: 100px;
+            transition: height 1s ease-in;
+        }
+        .height-transition:hover {
+            height: 200px;
+        }
+        .delayed-transition {
+            background-color: #fff;
+            transition: background-color 1s ease 0.5s;
+        }
+        .delayed-transition:hover {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CSS Transitions Demonstration</h1>
+</header>
+
+<div class="container">
+    <div class="box color-transition">
+        <h2>Color Transition</h2>
+        <p>Hover over this text to see the color transition.</p>
+    </div>
+    
+    <div class="box bg-transition">
+        <h2>Background-Color Transition</h2>
+        <p>Hover over this box to see the background-color transition.</p>
+    </div>
+    
+    <div class="box width-transition">
+        <h2>Width Transition</h2>
+        <p>Hover over this box to see the width transition.</p>
+    </div>
+    
+    <div class="box height-transition">
+        <h2>Height Transition</h2>
+        <p>Hover over this box to see the height transition.</p>
+    </div>
+    
+    <div class="box delayed-transition">
+        <h2>Delayed Transition</h2>
+        <p>Hover over this box to see a delayed background-color transition.</p>
+    </div>
+</div>
+
+</body>
+</html>

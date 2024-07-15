@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .checkbox-group,
+        .radio-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .checkbox-group label,
+        .radio-group label {
+            margin: 0;
+        }
+        .checkbox-group input,
+        .radio-group input {
+            margin: 0 10px 0 0;
+        }
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            border-color: #e74c3c;
+        }
+        .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Styled Form Elements</h1>
+</header>
+
+<div class="container">
+    <form id="exampleForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <div class="error-message" id="nameError"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error-message" id="emailError"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <div class="error-message" id="passwordError"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments" rows="4" required></textarea>
+            <div class="error-message" id="commentsError"></div>
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Hobbies</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="hobby1" name="hobbies" value="reading">
+                <label for="hobby1">Reading</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="hobby2" name="hobbies" value="traveling">
+                <label for="hobby2">Anime</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="hobby3" name="hobbies" value="sports">
+                <label for="hobby3">Sports</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+                <option value="">Select a country</option>
+                <option value="us">United States</option>
+                <option value="ca">India</option>
+                <option value="uk">United Kingdom</option>
+            </select>
+            <div class="error-message" id="countryError"></div>
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('exampleForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var formValid = true;
+
+        var name = document.getElementById('name');
+        var email = document.getElementById('email');
+        var password = document.getElementById('password');
+        var comments = document.getElementById('comments');
+        var country = document.getElementById('country');
+
+        var nameError = document.getElementById('nameError');
+        var emailError = document.getElementById('emailError');
+        var passwordError = document.getElementById('passwordError');
+        var commentsError = document.getElementById('commentsError');
+        var countryError = document.getElementById('countryError');
+
+        name.classList.remove('error');
+        email.classList.remove('error');
+        password.classList.remove('error');
+        comments.classList.remove('error');
+        country.classList.remove('error');
+
+        nameError.textContent = '';
+        emailError.textContent = '';
+        passwordError.textContent = '';
+        commentsError.textContent = '';
+        countryError.textContent = '';
+
+        if (name.value.trim() === '') {
+            formValid = false;
+            name.classList.add('error');
+            nameError.textContent = 'Name is required.';
+        }
+
+        if (email.value.trim() === '') {
+            formValid = false;
+            email.classList.add('error');
+            emailError.textContent = 'Email is required.';
+        } else if (!/\S+@\S+\.\S+/.test(email.value.trim())) {
+            formValid = false;
+            email.classList.add('error');
+            emailError.textContent = 'Invalid email address.';
+        }
+
+        if (password.value.trim() === '') {
+            formValid = false;
+            password.classList.add('error');
+            passwordError.textContent = 'Password is required.';
+        }
+
+        if (comments.value.trim() === '') {
+            formValid = false;
+            comments.classList.add('error');
+            commentsError.textContent = 'Comments are required.';
+        }
+
+        if (country.value.trim() === '') {
+            formValid = false;
+            country.classList.add('error');
+            countryError.textContent = 'Country is required.';
+        }
+
+        if (formValid) {
+            alert('Form submitted successfully!');
+        }
+    });
+</script>
+
+</body>
+</html>

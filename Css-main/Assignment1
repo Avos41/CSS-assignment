@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Example</title>
+  <style>
+    /* Element Selector */
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    /* Class Selector */
+    .highlight {
+      font-weight: bold;
+      color: #ff6b6b;
+    }
+
+    /* ID Selector */
+    #contact {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    /* Attribute Selector */
+    a[href] {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    /* Pseudo-class Selector */
+    a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    /* Pseudo-element Selector */
+    p:first-of-type::first-letter {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to my Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Us</h2>
+      <p>We are a company dedicated to providing high-quality products and services to our customers.</p>
+      <p class="highlight">Our mission is to exceed your expectations.</p>
+    </section>
+
+    <section>
+      <h2>Our Services</h2>
+      <ul>
+        <li class="service">Service 1</li>
+        <li class="service">Service 2</li>
+        <li class="service">Service 3</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Get in touch with us for more information.</p>
+      <a href="mailto:info@example.com">Email Us</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>

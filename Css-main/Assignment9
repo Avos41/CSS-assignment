@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .item {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 767px) {
+      body {
+        font-size: 14px;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .item {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Tablet Styles */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      body {
+        font-size: 16px;
+      }
+
+      .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .item {
+        width: 48%;
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Desktop Styles */
+    @media (min-width: 1024px) {
+      body {
+        font-size: 18px;
+      }
+
+      .container {
+        flex-direction: row;
+      }
+
+      .item {
+        width: 30%;
+      }
+
+      .item:nth-child(2) {
+        order: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Color Properties Example</title>
+  <style>
+    /* Color Properties */
+    .color {
+      color: red;
+    }
+
+    .background-color {
+      background-color: blue;
+    }
+
+    .gradient {
+      background-image: linear-gradient(to bottom, #f0f, #0f0);
+    }
+
+    /* Background Properties */
+    .background-block {
+      background-image: url('image.jpg');
+      background-repeat: repeat-x;
+      background-position: center center;
+    }
+
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2em;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to my Website</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Color Properties</h2>
+      <p>Using different color properties in CSS.</p>
+      <div class="color-block">
+        <h3>Color Properties</h3>
+        <p>Color: <span class="color">red</span></p>
+        <p>Background Color: <span class="background-color">blue</span></p>
+        <p>Gradient: <span class="gradient">linear-gradient(to bottom, #f0f, #0f0)</span></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Background Properties</h2>
+      <p>Using different background properties in CSS.</p>
+      <div class="background-block">
+        <h3>Background Properties</h3>
+        <p>Background Image: <span class="background-image">url('image.jpg')</span></p>
+        <p>Background Repeat: <span class="background-repeat">repeat-x</span></p>
+        <p>Background Position: <span class="background-position">center center</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom CSS Framework</title>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+            --warning-color: #ffc107;
+            --info-color: #17a2b8;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --white-color: #ffffff;
+            --font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -10px;
+        }
+
+        .col {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .col-1 { flex: 0 0 8.33%; max-width: 8.33%; }
+        .col-2 { flex: 0 0 16.66%; max-width: 16.66%; }
+        .col-3 { flex: 0 0 25%; max-width: 25%; }
+        .col-4 { flex: 0 0 33.33%; max-width: 33.33%; }
+        .col-5 { flex: 0 0 41.66%; max-width: 41.66%; }
+        .col-6 { flex: 0 0 50%; max-width: 50%; }
+        .col-7 { flex: 0 0 58.33%; max-width: 58.33%; }
+        .col-8 { flex: 0 0 66.66%; max-width: 66.66%; }
+        .col-9 { flex: 0 0 75%; max-width: 75%; }
+        .col-10 { flex: 0 0 83.33%; max-width: 83.33%; }
+        .col-11 { flex: 0 0 91.66%; max-width: 91.66%; }
+        .col-12 { flex: 0 0 100%; max-width: 100%; }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            color: var(--white-color);
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary { background-color: var(--primary-color); }
+        .btn-secondary { background-color: var(--secondary-color); }
+        .btn-success { background-color: var(--success-color); }
+        .btn-danger { background-color: var(--danger-color); }
+        .btn-warning { background-color: var(--warning-color); }
+        .btn-info { background-color: var(--info-color); }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .card {
+            background-color: var(--white-color);
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .mt-1 { margin-top: 10px; }
+        .mt-2 { margin-top: 20px; }
+        .mt-3 { margin-top: 30px; }
+        .mt-4 { margin-top: 40px; }
+        .mt-5 { margin-top: 50px; }
+
+        .mb-1 { margin-bottom: 10px; }
+        .mb-2 { margin-bottom: 20px; }
+        .mb-3 { margin-bottom: 30px; }
+        .mb-4 { margin-bottom: 40px; }
+        .mb-5 { margin-bottom: 50px; }
+
+        .p-1 { padding: 10px; }
+        .p-2 { padding: 20px; }
+        .p-3 { padding: 30px; }
+        .p-4 { padding: 40px; }
+        .p-5 { padding: 50px; }
+    </style>
+</head>
+<body>
+
+<header class="container mt-3 mb-3">
+    <h1>Custom CSS Framework</h1>
+    <p>This page demonstrates a simple custom CSS framework with a grid system, UI components, and utility classes.</p>
+</header>
+
+<section class="container">
+    <h2>Grid System</h2>
+    <div class="row">
+        <div class="col col-4">
+            <div class="card">
+                <h3>Column 4</h3>
+                <p>This is a 4-column layout using the custom grid system.</p>
+            </div>
+        </div>
+        <div class="col col-4">
+            <div class="card">
+                <h3>Column 4</h3>
+                <p>This is a 4-column layout using the custom grid system.</p>
+            </div>
+        </div>
+        <div class="col col-4">
+            <div class="card">
+                <h3>Column 4</h3>
+                <p>This is a 4-column layout using the custom grid system.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container mt-4">
+    <h2>Buttons</h2>
+    <button class="btn btn-primary">Primary Button</button>
+    <button class="btn btn-secondary">Secondary Button</button>
+    <button class="btn btn-success">Success Button</button>
+    <button class="btn btn-danger">Danger Button</button>
+    <button class="btn btn-warning">Warning Button</button>
+    <button class="btn btn-info">Info Button</button>
+</section>
+
+<section class="container mt-4">
+    <h2>Cards</h2>
+    <div class="card">
+        <h3>Card Title</h3>
+        <p>This is a card component with custom styles applied. It includes padding, border, border-radius, and box-shadow.</p>
+    </div>
+    <div class="card">
+        <h3>Card Title</h3>
+        <p>This is another card component with custom styles applied.</p>
+    </div>
+</section>
+
+<section class="container mt-4">
+    <h2>Forms</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</section>
+
+</body>
+</html>

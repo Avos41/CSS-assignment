@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Demonstration</title>
+    <style>
+        :root {
+            /* Define CSS Variables */
+            --primary-color: #4CAF50;
+            --secondary-color: #f0f0f0;
+            --text-color: #333;
+            --heading-font-size: 2em;
+            --paragraph-font-size: 1em;
+            --container-padding: 20px;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .container {
+            padding: var(--container-padding);
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+        }
+
+        h1 {
+            font-size: var(--heading-font-size);
+        }
+
+        p {
+            font-size: var(--paragraph-font-size);
+            line-height: 1.6;
+        }
+
+        .button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: var(--paragraph-font-size);
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: darken(var(--primary-color), 10%);
+        }
+
+        .card {
+            background-color: var(--secondary-color);
+            padding: var(--container-padding);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CSS Variables Demonstration</h1>
+</header>
+
+<div class="container">
+    <h2>Introduction</h2>
+    <p>This page demonstrates the use of CSS variables to define common values like colors, font sizes, and spacing. Using CSS variables helps maintain consistency and ease of maintenance across the stylesheet.</p>
+    
+    <div class="card">
+        <h2>Card Title</h2>
+        <p>This is a card component styled using CSS variables. It has consistent spacing, border-radius, and colors defined by the variables.</p>
+        <button class="button">Click Me</button>
+    </div>
+    
+    <div class="card">
+        <h2>Another Card</h2>
+        <p>CSS variables make it easy to apply the same styles across multiple elements, ensuring a consistent look and feel throughout the website.</p>
+        <button class="button">Learn More</button>
+    </div>
+</div>
+
+</body>
+</html>

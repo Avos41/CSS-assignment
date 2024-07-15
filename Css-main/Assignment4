@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Demo</title>
+    <style>
+        /* Default styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Box model demonstration */
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px;
+        }
+        
+        /* Border-box model */
+        .border-box {
+            box-sizing: border-box;
+            width: 200px;
+            height: 100px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px;
+        }
+        
+        /* Content-box model */
+        .content-box {
+            box-sizing: content-box;
+            width: 200px;
+            height: 100px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px;
+        }
+        
+        /* Padding and margin examples */
+        .padding-example {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            padding: 20px;
+        }
+        
+        .margin-example {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            margin: 20px;
+        }
+        
+        .border-example {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            border: 10px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Box Model Demo</h1>
+    <p>Here are some examples of how padding, border, and margin affect different elements:</p>
+    <div class="box">
+        <p>This is a box with padding, border, and margin.</p>
+    </div>
+    <p>Switching to border-box model:</p>
+    <div class="border-box">
+        <p>This is a box with padding, border, and margin in border-box model.</p>
+    </div>
+    <p>Switching to content-box model:</p>
+    <div class="content-box">
+        <p>This is a box with padding, border, and margin in content-box model.</p>
+    </div>
+    <p>Padding examples:</p>
+    <div class="padding-example">
+        <p>This is a box with padding only.</p>
+    </div>
+    <p>Margin examples:</p>
+    <div class="margin-example">
+        <p>This is a box with margin only.</p>
+    </div>
+    <p>Border examples:</p>
+    <div class="border-example">
+        <p>This is a box with a border only.</p>
+    </div>
+</body>
+</html>
